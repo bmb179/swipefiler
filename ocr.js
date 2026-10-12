@@ -7,7 +7,7 @@ const SF_OCR = (() => {
   function getWorker() {
     if (!workerPromise) {
       workerPromise = Tesseract.createWorker("eng", 1, {
-        workerPath: url("vendor/worker.min.js"),
+        workerPath: url("vendor/worker-shim.js"),
         corePath: url("vendor/core/"),
         langPath: url("vendor/lang/"),
         gzip: true,

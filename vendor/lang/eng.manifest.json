@@ -1,0 +1,9 @@
+{
+ "file": "eng.traineddata.gz",
+ "encoding": "base64",
+ "bytes": 2952873,
+ "chunks": [
+  "eng.traineddata.gz.b64.000",
+  "eng.traineddata.gz.b64.001"
+ ]
+}

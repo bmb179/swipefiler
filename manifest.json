@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "swipefiler",
+  "version": "1.3.0",
+  "description": "Captures ads and snipped promo posts, then keep or delete them.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "downloads",
+    "tabs",
+    "contextMenus",
+    "scripting",
+    "offscreen"
+  ],
+  "commands": {
+    "snip": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "Snip a post or region"
+    }
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "swipefiler"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

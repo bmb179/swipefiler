@@ -26,3 +26,7 @@ Each auto-captured ad and each manual snip is now read for text. The text is sav
 
 ## How to install
 Unzip, open chrome://extensions, turn on Developer mode, click "Load unpacked" and pick the unzipped folder. If you had 1.2.0 loaded, remove it first or hit reload on it. Your saved ads stay.
+
+## 1.3.1
+- The English language file used by the text reader is now stored as plain-text pieces (`vendor/lang/eng.traineddata.gz.b64.000` and `.001`, plus a small list file), so the whole extension can be saved in Dropbox and GitHub. The extension rebuilds the original file in memory when it reads an ad. It still never goes online. Nothing changes for you.
+- Version is now 1.3.1.

@@ -11,4 +11,4 @@ A Chrome extension (Manifest V3) for marketers. It catches display ads as you br
 Everything stays on your computer. Captures are kept in the browser's local storage, and text is read on-device by a bundled copy of Tesseract. Nothing is uploaded and there are no analytics.
 
 ## Third-party
-`vendor/` contains Tesseract.js 5.1.1 and tesseract.js-core 5.1.1 (Apache-2.0, licenses included in `vendor/`) and the English `eng.traineddata` model from tessdata (Apache-2.0).
+`vendor/` contains Tesseract.js 5.1.1 and tesseract.js-core 5.1.1 (Apache-2.0, licenses included in `vendor/`) and the English `eng.traineddata` model from tessdata (Apache-2.0). The model is stored base64-encoded in `vendor/lang/eng.traineddata.gz.b64.*` (listed in `eng.manifest.json`) and decoded on-device by `vendor/worker-shim.js`.

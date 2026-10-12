@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>swipefiler</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body class="full">
+    <header>
+      <div>
+        <strong>swipefiler</strong>
+        <span id="counts">0 to review</span>
+      </div>
+      <div class="header-actions">
+        <button id="snip" type="button">Snip</button>
+        <label class="toggle">
+          <input id="enabled" type="checkbox" />
+          <span>On</span>
+        </label>
+      </div>
+    </header>
+    <nav>
+      <button id="tab-review" class="tab on" type="button">Review</button>
+      <button id="tab-file" class="tab" type="button">File</button>
+    </nav>
+    <main id="review">
+      <div id="stage">
+        <article id="card">
+          <img id="card-img" alt="" />
+          <div id="card-empty">Nothing to review. Snip a post, or browse for ads.</div>
+          <div id="card-meta">
+            <div id="card-title"></div>
+            <div id="card-url"></div>
+            <div id="card-text" class="ad-text"></div>
+          </div>
+        </article>
+      </div>
+      <div class="decisions">
+        <button id="no" class="no" type="button" aria-label="Delete">✕</button>
+        <button id="yes" class="yes" type="button" aria-label="Keep">✓</button>
+      </div>
+    </main>
+    <main id="file" hidden>
+      <section class="profile">
+        <div class="avatar">sf</div>
+        <div>
+          <div class="handle">swipefiler</div>
+          <div class="stats"><b id="post-count">0</b> posts</div>
+          <div class="bio">Ads you kept.</div>
+        </div>
+      </section>
+      <div id="grid"></div>
+    </main>
+    <div id="lightbox" hidden>
+      <button id="close-light" type="button">Close</button>
+      <img id="light-img" alt="" />
+      <div id="light-cap"></div>
+      <div id="light-text" class="ad-text"></div>
+      <button id="copy-text" type="button">Copy text</button>
+    </div>
+    <script src="db.js"></script>
+    <script src="ui.js"></script>
+  </body>
+</html>
